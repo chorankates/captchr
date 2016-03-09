@@ -56,7 +56,7 @@ end
 ## initialize some helpers
 ph = PhoneHome.new()
 
-post '/' do
+post '/et' do
 
   ip = self.request.env['REMOTE_ADDR']
 
