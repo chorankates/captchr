@@ -1,5 +1,8 @@
 require 'jeweler'
 require 'rake'
+require 'rake/clean'
+
+CLEAN.include('pkg/*')
 
 Jeweler::Tasks.new do |gem|
   gem.name        = 'captchr'

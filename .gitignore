@@ -2,3 +2,7 @@
 # ide
 .idea/*
 *.iml
+
+# generated
+pkg/*
+*.gemspec
