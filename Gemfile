@@ -6,6 +6,7 @@ source 'https://rubygems.org'
 group :home do
   gem 'sequel', '~> 4.32.0', '>= 4.32.0'
   gem 'sinatra', '~> 1.4.7', '>= 1.4.7'
+  gem 'sqlite3', '~> 1.3.11', '>=1.3.11'
 end
 
 

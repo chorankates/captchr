@@ -1,6 +1,7 @@
 require 'jeweler'
 require 'rake'
 require 'rake/clean'
+require 'rake/testtask'
 
 CLEAN.include('pkg/*')
 
@@ -15,3 +16,20 @@ Jeweler::Tasks.new do |gem|
 
 end
 Jeweler::RubygemsDotOrgTasks.new
+
+namespace :test do
+  Rake::TestTask.new do |t|
+    t.name = 'unit'
+    t.libs << 'lib'
+    t.test_files = FileList['test/**/test_*.rb']
+    t.verbose = true
+  end
+end
+
+desc 'run all tests'
+task :test => ['test:unit'] do; end
+
+desc 'run Home'
+task :home do
+  sh 'ruby bin/home.rb'
+end
