@@ -34,11 +34,9 @@ class Captchr
         )
       )
 
-      d = http.request(request)
-      p 'DBGZ' if nil?
+      http.request(request)
     rescue => e
-      # noop, just being bullet proof
-      p 'DBGZ' if nil?
+      puts sprintf('caught[%s] backtrace[%s]', e.message, e.backtrace)
     end
 
   end
