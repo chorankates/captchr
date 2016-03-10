@@ -68,7 +68,7 @@ post '/et' do
 end
 
 configure do
-  set :bind '0.0.0.0'
+  set :bind, '0.0.0.0'
 end
 
 # don't respond to anything except what we've defined
