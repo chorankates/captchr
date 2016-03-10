@@ -10,7 +10,7 @@ class Captchr
   attr_accessor :hashed_hostname, :platform, :ruby_version
 
   def initialize
-    reporting_hostname  = ENV['DEV'].nil? ? 'localhost' : 'localhost'
+    reporting_hostname  = ENV['DEV'].nil? ? 'captchr.pwnz.org' : 'localhost'
     @reporting_endpoint = sprintf('http://%s:%i', reporting_hostname, 4567)
 
     @hashed_hostname = Digest::SHA2.hexdigest(`hostname`.chomp)
