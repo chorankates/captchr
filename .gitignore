@@ -6,3 +6,4 @@
 # generated
 pkg/*
 *.gemspec
+bike.db

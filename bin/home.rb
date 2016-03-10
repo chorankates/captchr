@@ -1,10 +1,7 @@
 #!/usr/bin/ruby
 # home.rb is the server side of captchr, listens for ET. loves reeses pieces.
 
-# TODO
-## add sequel and db (sqlite3) integration
-
-DESMOND = 'sqlite://bike.db'
+DESMOND = sprintf('sqlite://%s', File.join(sprintf('%s/../bike.db', File.dirname(__FILE__))))
 
 require 'sequel'
 require 'sinatra'
