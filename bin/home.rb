@@ -67,6 +67,10 @@ post '/et' do
   ph.add_entry(phe)
 end
 
+configure do
+  set :bind '0.0.0.0'
+end
+
 # don't respond to anything except what we've defined
 error Sinatra::NotFound do
   content_type 'text/plain'
