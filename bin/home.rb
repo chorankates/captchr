@@ -13,7 +13,7 @@ class PhoneHome
   def initialize(db = DESMOND)
     @db = Sequel.connect(db)
 
-  # create a table if necessary
+    # create a table if necessary
     @db.create_table? :entries do
       primary_key :id
       String :hashed_hostname
