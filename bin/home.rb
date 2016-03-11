@@ -65,6 +65,7 @@ post '/et' do
 
   phe = PhoneHomeEntry.new(hashed_hostname, ip, platform, ruby_version)
   ph.add_entry(phe)
+  phe # return the object we created
 end
 
 configure do
