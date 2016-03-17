@@ -20,7 +20,9 @@ class PhoneHome
       String :ip
       String :platform
       String :ruby_version
+      String :geolocation
       Date :created
+      Date :updated
     end
   end
 
@@ -31,17 +33,20 @@ class PhoneHome
       :ip              => phe.ip,
       :platform        => phe.platform,
       :ruby_version    => phe.ruby_version,
+      :geolocation     => nil,
       :created         => Time.now,
+      :updated         => nil,
     )
   end
 
 end
 
 class PhoneHomeEntry
-  attr_reader :created, :hashed_hostname, :ip, :platform, :ruby_version
+  attr_reader :created, :geolocation, :hashed_hostname, :ip, :platform, :ruby_version
 
-  def initialize(hashed_hostname, ip, platform, ruby_version)
+  def initialize(hashed_hostname, ip, platform, ruby_version, geolocation = nil)
     @created         = Time.now
+    @geolocation     = geolocation
     @hashed_hostname = hashed_hostname
     @ip              = ip
     @platform        = platform
